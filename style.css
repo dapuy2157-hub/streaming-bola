@@ -294,6 +294,50 @@ body {
 }
 
 /* ==========================================================
+   TOMBOL GOOGLE & DIVIDER
+========================================================== */
+.btn-google {
+    width: 100%;
+    padding: 12px;
+    background: #fff;
+    border: none;
+    border-radius: 12px;
+    color: #333;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+.btn-google:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(255,255,255,0.15);
+}
+.btn-google i {
+    color: #ea4335;
+    font-size: 1.1rem;
+}
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #666;
+    font-size: 0.8rem;
+    margin: 12px 0;
+}
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.05);
+}
+
+/* ==========================================================
    TOGGLE SIDEBAR
 ========================================================== */
 .toggle-sidebar {
@@ -984,6 +1028,14 @@ body {
     .loader-text {
         font-size: 1.4rem;
     }
+    .btn-google {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+    .divider {
+        font-size: 0.7rem;
+        margin: 8px 0;
+    }
     /* Matiin rotate di HP biar ga aneh */
     .player-wrap.rotate {
         transform: rotate(0deg);
@@ -1013,4 +1065,8 @@ body {
     .loader-text {
         font-size: 1.2rem;
     }
-}
+    .btn-google {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+   }
