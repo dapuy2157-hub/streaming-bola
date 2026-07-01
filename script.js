@@ -9,8 +9,7 @@
 // KONFIGURASI GIST
 // ==========================================================
 const GIST_ID = 'dde9e0ca0b50e38f9b2af7e44b5686bb';
-const GIST_TOKEN = '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';
-
+const GIST_TOKEN = process.env.GIST_TOKEN || '';
 // ==========================================================
 // STATE
 // ==========================================================
