@@ -375,7 +375,7 @@ async function loadAdminBeritaList() {
         return;
     }
     container.innerHTML = data.berita.map((b, i) => `
-        <div class="berita-item" data-id="${b.id}" style="padding-right:50px;">
+        <div class="berita-item" data-id="${b.id}" style="padding-right:50px;position:relative;">
             <div class="date">${b.date || 'Baru'}</div>
             <h4>${b.title}</h4>
             <p>${b.content}</p>
