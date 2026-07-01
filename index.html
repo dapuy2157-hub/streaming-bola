@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>⚽ PIALA DUNIA 2026 STREAMING</title>
+    <title>⚽ FIFA WORLD CUP STREAMING FREE</title>
     <!-- Preload Logo -->
     <link rel="preload" as="image" href="logo.png" />
     <link rel="stylesheet" href="style.css">
@@ -28,13 +28,311 @@
                 <div class="loader-bar-fill" id="loaderFill"></div>
             </div>
             <div class="loader-percent" id="loaderPercent">0%</div>
-            <div class="loader-credit">⚽ powered by Dapskuy x Team Wolf</div>
+            <div class="loader-credit">⚽ Powered by DapzxPloit</div>
         </div>
     </div>
 
     <!-- ========================================================== -->
     <!-- AUTH MODAL (LOGIN / REGISTER) -->
     <!-- ========================================================== -->
+    <div id="authModal">
+        <div class="auth-box">
+            <div class="auth-logo">
+                <img src="logo.png" alt="FIFA World Cup" />
+            </div>
+            <h2 id="authTitle">WORLD CUP ACCESS</h2>
+            <p class="sub" id="authSub">Login untuk menonton streaming gratis</p>
+            <input type="text" id="authUsername" placeholder="Username" />
+            <input type="password" id="authPassword" placeholder="Password" />
+            <input type="email" id="authEmail" placeholder="Email" style="display:none;" />
+            <button class="btn-submit" id="authSubmitBtn">Login</button>
+            
+            <!-- DIVIDER -->
+            <div class="divider">atau</div>
+            
+            <!-- TOMBOL GOOGLE LOGIN -->
+            <button class="btn-google" id="googleLoginBtn">
+                <i class="fab fa-google"></i> Login dengan Google
+            </button>
+            
+            <div class="switch">
+                <span id="authSwitchText">Belum punya akun? <a id="authSwitchLink">Daftar Sekarang</a></span>
+            </div>
+            <div class="auth-footer">⚽ FIFA World Cup 2026 • Live Streaming</div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- SIDEBAR OVERLAY -->
+    <!-- ========================================================== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ========================================================== -->
+    <!-- SIDEBAR -->
+    <!-- ========================================================== -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button>
+        <div class="brand">
+            <img src="logo.png" alt="Logo" class="brand-logo" />
+            <span>WORLD CUP</span>
+            <span class="brand-badge">LIVE</span>
+        </div>
+        <div class="user-info" id="sidebarUser">
+            <i class="fas fa-user-circle"></i> 
+            <strong id="sidebarName">User</strong> 
+            <span class="role-badge" id="sidebarRole">user</span>
+        </div>
+
+        <ul class="menu" id="sidebarMenu">
+            <li class="active" data-page="dashboard"><i class="fas fa-home"></i> Dashboard</li>
+            <li data-page="live"><i class="fas fa-play-circle"></i> Live Streaming</li>
+            <li data-page="berita"><i class="fas fa-newspaper"></i> Berita</li>
+            <li class="admin-only" data-page="admin-api"><i class="fas fa-link"></i> Ganti API</li>
+            <li class="admin-only" data-page="admin-berita"><i class="fas fa-bullhorn"></i> Siarkan Berita</li>
+            <li class="admin-only" data-page="admin-history"><i class="fas fa-history"></i> History Users</li>
+            <li data-page="logout"><i class="fas fa-sign-out-alt"></i> Logout</li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <span>⚽ FIFA World Cup 2026</span>
+            <span>v2.0</span>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- TOGGLE SIDEBAR -->
+    <!-- ========================================================== -->
+    <button class="toggle-sidebar" id="toggleSidebar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- ========================================================== -->
+    <!-- MAIN CONTENT -->
+    <!-- ========================================================== -->
+    <div id="mainApp">
+        <div class="content" id="contentArea">
+
+            <!-- ====================================================== -->
+            <!-- PAGE: DASHBOARD -->
+            <!-- ====================================================== -->
+            <div class="page active" id="page-dashboard">
+                <div class="page-header">
+                    <div class="page-header-left">
+                        <img src="logo.png" alt="FIFA World Cup" class="header-logo" />
+                        <div>
+                            <h1>🏆 Dashboard</h1>
+                            <p>Selamat datang di FIFA World Cup Streaming Free</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="dash-card">
+                        <div class="dash-icon"><i class="fas fa-users"></i></div>
+                        <div class="dash-info">
+                            <h3>Total Pengguna</h3>
+                            <div class="value" id="totalUsers">0</div>
+                        </div>
+                    </div>
+                    <div class="dash-card">
+                        <div class="dash-icon"><i class="fas fa-eye"></i></div>
+                        <div class="dash-info">
+                            <h3>Streaming Aktif</h3>
+                            <div class="value">⚡ LIVE</div>
+                        </div>
+                    </div>
+                    <div class="dash-card">
+                        <div class="dash-icon"><i class="fas fa-newspaper"></i></div>
+                        <div class="dash-info">
+                            <h3>Berita Terbaru</h3>
+                            <div class="value" id="beritaCount">0</div>
+                        </div>
+                    </div>
+                    <div class="dash-card">
+                        <div class="dash-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="dash-info">
+                            <h3>Turnamen</h3>
+                            <div class="value">FIFA 2026</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Website -->
+                <div class="info-website">
+                    <h2><i class="fas fa-info-circle"></i> Tentang Website</h2>
+                    <p>
+                        ⚽ <strong>FIFA World Cup Streaming Free</strong> adalah platform streaming 
+                        gratis untuk menonton pertandingan Piala Dunia secara real-time. 
+                        Nikmati kualitas HD, latensi rendah, dan akses mudah dari mana saja.
+                    </p>
+                    <div class="info-features">
+                        <span><i class="fas fa-check-circle" style="color:#00c864;"></i> Streaming HD</span>
+                        <span><i class="fas fa-check-circle" style="color:#00c864;"></i> Free Forever</span>
+                        <span><i class="fas fa-check-circle" style="color:#00c864;"></i> Multi Device</span>
+                        <span><i class="fas fa-check-circle" style="color:#00c864;"></i> Tanpa Iklan</span>
+                    </div>
+                </div>
+
+                <!-- Pengumuman -->
+                <div class="announcement-box" id="announcementBox">
+                    <i class="fas fa-bullhorn"></i>
+                    <span id="announcementText">Selamat menonton FIFA World Cup 2026! 🏆</span>
+                </div>
+            </div>
+
+            <!-- ====================================================== -->
+            <!-- PAGE: LIVE STREAMING -->
+            <!-- ====================================================== -->
+            <div class="page" id="page-live">
+                <div class="page-header">
+                    <div class="page-header-left">
+                        <img src="logo.png" alt="FIFA World Cup" class="header-logo" />
+                        <div>
+                            <h1>📺 Live Streaming</h1>
+                            <p>FIFA World Cup 2026 - Match Day</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-wrap" id="playerWrap">
+                    <div class="player-loading" id="playerLoading">
+                        <div class="spinner"></div>
+                        <p>⏳ Menghubungkan ke stream...</p>
+                    </div>
+                    <iframe id="liveIframe" src="" allowfullscreen allow="encrypted-media; picture-in-picture;"></iframe>
+                </div>
+                <div class="player-info">
+                    <span><i class="fas fa-circle" style="color:#ff2d55;"></i> LIVE</span>
+                    <span><i class="fas fa-hd"></i> HD Quality</span>
+                    <span><i class="fas fa-bolt"></i> Low Latency</span>
+                    <button class="btn-rotate" id="rotateBtn" title="Putar Layar">
+                        <i class="fas fa-rotate-right"></i> Miring
+                    </button>
+                </div>
+            </div>
+
+            <!-- ====================================================== -->
+            <!-- PAGE: BERITA -->
+            <!-- ====================================================== -->
+            <div class="page" id="page-berita">
+                <div class="page-header">
+                    <div class="page-header-left">
+                        <img src="logo.png" alt="FIFA World Cup" class="header-logo" />
+                        <div>
+                            <h1>📰 Berita</h1>
+                            <p>Informasi terbaru seputar Piala Dunia</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="beritaContainer">
+                    <div class="berita-empty">
+                        <i class="fas fa-newspaper"></i>
+                        <p>Belum ada berita dari admin.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====================================================== -->
+            <!-- PAGE: ADMIN - GANTI API -->
+            <!-- ====================================================== -->
+            <div class="page" id="page-admin-api">
+                <div class="page-header">
+                    <div class="page-header-left">
+                        <img src="logo.png" alt="FIFA World Cup" class="header-logo" />
+                        <div>
+                            <h1>🔗 Ganti URL Streaming</h1>
+                            <p>Admin only - Update link stream</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-card">
+                    <label>URL Stream (iframe src)</label>
+                    <input type="text" id="adminStreamUrl" placeholder="https://..." />
+                    <button class="btn-save" id="adminSaveStream"><i class="fas fa-save"></i> Simpan URL</button>
+                    <div class="admin-status" id="streamStatus">Status: <span style="color:#00c864;">Online</span></div>
+                </div>
+            </div>
+
+            <!-- ====================================================== -->
+            <!-- PAGE: ADMIN - SIIARKAN BERITA -->
+            <!-- ====================================================== -->
+            <div class="page" id="page-admin-berita">
+                <div class="page-header">
+                    <div class="page-header-left">
+                        <img src="logo.png" alt="FIFA World Cup" class="header-logo" />
+                        <div>
+                            <h1>📢 Siarkan Berita</h1>
+                            <p>Admin only - Kirim pengumuman ke semua user</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-card">
+                    <label>Judul Berita</label>
+                    <input type="text" id="adminBeritaTitle" placeholder="Judul berita..." />
+                    <label>Isi Berita</label>
+                    <textarea id="adminBeritaContent" placeholder="Tulis berita di sini..."></textarea>
+                    <button class="btn-save" id="adminSendBerita"><i class="fas fa-paper-plane"></i> Kirim Berita</button>
+                </div>
+                <div class="admin-card" style="margin-top:16px;">
+                    <h4 style="color:#888;margin-bottom:8px;">📋 Daftar Berita</h4>
+                    <div id="adminBeritaList"></div>
+                </div>
+            </div>
+
+            <!-- ====================================================== -->
+            <!-- PAGE: ADMIN - HISTORY USERS -->
+            <!-- ====================================================== -->
+            <div class="page" id="page-admin-history">
+                <div class="page-header">
+                    <div class="page-header-left">
+                        <img src="logo.png" alt="FIFA World Cup" class="header-logo" />
+                        <div>
+                            <h1>📜 History Users</h1>
+                            <p>Admin only - Lihat aktivitas user</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-card">
+                    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+                        <span style="color:#888;">Total User: <strong id="historyTotalUsers">0</strong></span>
+                        <button class="btn-save btn-refresh" id="refreshHistory"><i class="fas fa-sync-alt"></i> Refresh</button>
+                    </div>
+                    <div class="table-wrap">
+                        <table class="user-table">
+                            <thead>
+                                <tr>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>IP Address</th>
+                                    <th>Lokasi</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="historyTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- TOAST NOTIFICATION -->
+    <!-- ========================================================== -->
+    <div class="toast" id="toast"></div>
+
+    <!-- ========================================================== -->
+    <!-- SUPABASE CLIENT -->
+    <!-- ========================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- ========================================================== -->
+    <!-- SCRIPTS -->
+    <!-- ========================================================== -->
+    <script src="script.js"></script>
+</body>
+    </html>    <!-- ========================================================== -->
     <div id="authModal">
         <div class="auth-box">
             <div class="auth-logo">
